@@ -11,7 +11,6 @@ function Login() {
 			senha: values.password,
 		}).then((response) => {
 			alert(response.data.msg);
-			console.log(response);
 		});
     };
 

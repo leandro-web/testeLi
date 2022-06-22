@@ -8,21 +8,12 @@ const saltRounds = 10;
 app.use(express.json());
 app.use(cors());
 
-/*
 const db = mysql.createPool({
-    host: "192.185.176.240",
+    host: "192.185.217.49",
     user: "casadoma_li_user",
     password: "$$GLoyPB8^MK",
     database: "casadoma_li"
 });
-*/
-const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "loja_integrada"
-});
-
 
 app.post("/register", (req, res) => {
     const email = req.body.email;
@@ -76,17 +67,6 @@ app.post("/login", (req, res) => {
     )
 })
 
-/*
-app.get('/', (req, res) => {
-    db.query(
-        "INSERT INTO usuarios (email, senha) VALUES ('test_1@teste.com', '12345678')", (err, result) => {
-            if(err){
-                console.log(err)
-            }
-        }
-    );
-});
-*/
 
 app.listen(3001, () => {
     console.log("Rodando na porta 3001");

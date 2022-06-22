@@ -26,8 +26,9 @@ function Register() {
 			.min(8, "A senha deve ter no minimo 8 caracteres")
 			.required("Este campo é obrigatório"),
 		confirmPassword: yup
-			.string()
-			.oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),
+            .string()
+            .required("Este campo é obrigatório")
+            .oneOf([yup.ref("password"), null], "As senhas devem ser iguais"),            
     });
     
     return (
